@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PLM GPA / GWA Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>PLM GPA / GWA Calculator</h1>
+      <p class="subtitle">Pamantasan ng Lungsod ng Maynila grading scale</p>
+    </header>
+
+    <section class="subjects card">
+      <div class="section-header">
+        <h2>Subjects</h2>
+        <button type="button" id="addRowBtn" class="btn btn-secondary">+ Add Subject</button>
+      </div>
+
+      <div class="table-wrapper">
+        <table id="subjectsTable">
+          <thead>
+            <tr>
+              <th>Subject</th>
+              <th>Units</th>
+              <th>Grade</th>
+              <th>Remarks</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="subjectsBody">
+          </tbody>
+        </table>
+      </div>
+
+      <div class="actions">
+        <button type="button" id="calculateBtn" class="btn btn-primary">Calculate GWA</button>
+        <button type="button" id="resetBtn" class="btn btn-outline">Reset</button>
+      </div>
+    </section>
+
+    <section class="results card" id="resultsSection" hidden>
+      <h2>Results</h2>
+      <div class="results-grid">
+        <div class="result-item">
+          <span class="result-label">GWA / GPA</span>
+          <span class="result-value" id="gwaValue">—</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Interpretation</span>
+          <span class="result-value" id="interpretationValue">—</span>
+        </div>
+        <div class="result-item">
+          <span class="result-label">Total Units Counted</span>
+          <span class="result-value" id="unitsValue">—</span>
+        </div>
+      </div>
+      <div id="excludedNotice" class="notice" hidden></div>
+      <div id="errorNotice" class="error-notice" hidden></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
